@@ -21,3 +21,11 @@
 .navbar-item a:hover {
     background-color: #111;
 }
+
+.navbar-current {
+    background-color: red;
+}
+
+.navbar-current a:hover {
+    background-color: darkred;
+}

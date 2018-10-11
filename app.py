@@ -8,7 +8,7 @@ import config
 
 class PageHandler(tornado.web.RequestHandler):
     template = "base.html"
-    navbar_item = None
+    navbar_current = None
 
     def get(self):
         navbar_items = [
@@ -28,23 +28,23 @@ class PageHandler(tornado.web.RequestHandler):
         self.render(
             self.template,
             navbar_items=navbar_items,
-            navbar_selected=self.navbar_item
+            navbar_current=self.navbar_current
         )
 
 
 class HomepageHandler(PageHandler):
     template = "home.html"
-    navbar_item = "Home"
+    navbar_current = "Home"
 
 
 class AboutPageHandler(PageHandler):
     template = "about.html"
-    navbar_item = "About"
+    navbar_current = "About"
 
 
 class ShutdownHandler(PageHandler):
     template = "shutdown.html"
-    navbar_item = "Shutdown"
+    navbar_current = "Shutdown"
 
     def get(self):
         PageHandler.get(self)
