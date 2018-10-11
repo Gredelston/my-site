@@ -1,6 +1,5 @@
 <html>
     <head>
-        <link rel='stylesheet' href='{{ static_url("navbar.css") }}'>
         <title>
             {% block title %}
                 Title
@@ -10,15 +9,7 @@
     </head>
 
     <body>
-        <ul id="navbar">
-            {% for item in navbar_items %}
-                <li class="navbar-item">
-                    <a href="{{ escape(item["route"]) }}">
-                        {{ escape(item["name"]) }}
-                    </a>
-                </li>
-            {% end %}
-        </ul>
+        {% include navbar.html %}
 
         {% block body %}
             Main Body
