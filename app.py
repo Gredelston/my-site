@@ -7,41 +7,47 @@ import config
 ### Page handlers ###
 
 class PageHandler(tornado.web.RequestHandler):
-    def write_headers(self):
-        self.write('<link rel="stylesheet" href="{}">'.format(
-            os.path.join(config.static_files_dir, 'navbar.css')
-        ))
-        self.write_navbar()
+    template = "base.html"
+    navbar_item = None
 
-    def write_newline(self):
-        self.write("<br>")
-    
-    def write_navbar(self):
-        self.write("<ul id='navbar'>")
-        self.write_navbar_item("Home", "/home")
-        self.write_navbar_item("About", "/about")
-        self.write_navbar_item("Shutdown", "/shutdown")
-        self.write("</ul>")
-    
-    def write_navbar_item(self, name, route):
-        self.write("<li class='navbar-item'><a href='{}'>{}</a></li>".format(
-            route,
-            name
-        ))
+    def get(self):
+        navbar_items = [
+            {
+                "name": "Home",
+                "route": "/"
+            },
+            {
+                "name": "About",
+                "route": "/about"
+            },
+            {
+                "name": "Shutdown",
+                "route": "/shutdown"
+            }
+        ]
+        self.render(
+            self.template,
+            navbar_items=navbar_items,
+            navbar_selected=self.navbar_item
+        )
+
 
 class HomepageHandler(PageHandler):
-    def get(self):
-        self.write_headers()
-        self.write("Hello, world!")
+    template = "home.html"
+    navbar_item = "Home"
+
 
 class AboutPageHandler(PageHandler):
-    def get(self):
-        self.write_headers()
-        self.write("About")
+    template = "about.html"
+    navbar_item = "About"
+
 
 class ShutdownHandler(PageHandler):
+    template = "shutdown.html"
+    navbar_item = "Shutdown"
+
     def get(self):
-        self.write_headers()
+        PageHandler.get(self)
         shutdown_app()
 
 
@@ -56,7 +62,9 @@ def make_app():
         (r"/shutdown", ShutdownHandler)
     ]
     settings = {
-        "static_path": os.path.join(os.path.dirname(__file__), "static")
+        "static_path": config.static_path,
+        "template_path": config.template_path
+
     }
     return tornado.web.Application(handlers, **settings)
 
