@@ -7,8 +7,16 @@ import config
 ### Page handlers ###
 
 class PageHandler(tornado.web.RequestHandler):
+    """
+    Base class for handling GET requests.
+    Individual sub-classes are created for each page, based on config.pages,
+    in create_route_handlers().
+
+    """
     template = "base.html"
     navbar_display_text = None
+
+    # Configure the navbar exactly once.
     navbar_items = [
         {
             "display-text": page["navbar-display-text"],
@@ -17,6 +25,7 @@ class PageHandler(tornado.web.RequestHandler):
     ]
 
     def get(self):
+        """Respond to GET requests by rendering self.template."""
         self.render(
             self.template,
             navbar_items=self.navbar_items,
@@ -26,6 +35,7 @@ class PageHandler(tornado.web.RequestHandler):
 ### Application logic
 
 def make_app():
+    """Create page handlers and create a Tornado app."""
     handlers = create_route_handlers(config.pages)
     settings = {
         "static_path": config.static_path,
@@ -36,6 +46,7 @@ def make_app():
 
 
 def create_route_handlers(pages):
+    """Dynamically generate a PageHandler sub-class for each config.page."""
     handlers = []
     for page in pages:
         route = page["route"]
@@ -50,6 +61,7 @@ def create_route_handlers(pages):
 
 
 def shutdown_app():
+    """Gracefully spin down."""
     print("Shutting down app.")
     tornado.ioloop.IOLoop.current().stop()
 
