@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
+{% block head %}
+    <link rel='stylesheet' href='{{ static_url("home.css") }}'>
+{% end %}
+
 {% block title %}
     Greg Edelston
 {% end %}
 
 {% block body %}
-    Hello! This is my homepage. We're still figuring it out. Thank you for your patience.
+
+    <p id='welcome'>
+        Welcome!
+    </p>
+    <p id='blurb'>
+        This is my homepage. Please excuse the mess while I figure out how I want it to look.
+    </p>
 {% end %}

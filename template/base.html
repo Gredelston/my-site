@@ -1,18 +1,23 @@
 <html>
     <head>
+        {% block head %}{% end %}
+        <link rel='stylesheet' href='{{ static_url("base.css") }}'>
+        <link rel='stylesheet' href='{{ static_url("reset.css") }}'>
+
         <title>
             {% block title %}
                 Title
             {% end %}
         </title>
-
     </head>
 
     <body>
         {% include navbar.html %}
 
-        {% block body %}
-            Main Body
-        {% end %}
+        <div id='main'>
+            {% block body %}
+                Main Body
+            {% end %}
+        </div>
     </body>
 </html>

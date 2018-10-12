@@ -23,9 +23,9 @@
 }
 
 .navbar-current {
-    background-color: red;
+    background-color: #FF4639;
 }
 
 .navbar-current a:hover {
-    background-color: darkred;
+    background-color: #A82E26;
 }

@@ -63,7 +63,8 @@ def make_app():
     ]
     settings = {
         "static_path": config.static_path,
-        "template_path": config.template_path
+        "template_path": config.template_path,
+        "debug": True
 
     }
     return tornado.web.Application(handlers, **settings)
