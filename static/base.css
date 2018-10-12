@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "ADAM.CG";
+    src: url("fonts/ADAM.CG\ PRO.otf");
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/Nunito/Nunito-Regular.ttf");
+}
+
 #main {
     background-color: #78FF58;
     height: 100%;
@@ -17,7 +27,17 @@
     position: relative;
 }
 
+.card {
+    font-family: "Nunito";
+}
+
 .card h1 {
-    font-size: 24px;
-    padding-bottom: 10px;
+    font-size: 36px;
+    padding-bottom: 16px;
+    font-family: "ADAM.CG";
+    color: #244C1A
+}
+
+.card p {
+    padding-left: 1px;
 }

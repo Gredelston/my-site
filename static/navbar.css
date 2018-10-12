@@ -8,11 +8,13 @@
 
 .navbar-item {
     float: left;
+    font-family: "Nunito";
 }
 
 .navbar-item a {
     display: inline-block;
-    color: white;
+    /*color: white;*/
+    color: #F5F5F5;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -20,6 +22,7 @@
 
 .navbar-item a:hover {
     background-color: #111;
+    color: #78FF58;
 }
 
 .navbar-current {

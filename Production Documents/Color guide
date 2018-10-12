@@ -1,10 +1,14 @@
-Dominant-Yellow: #E8B220
+Light-Green: #78FF58
+Dark-Green: #244C1A
+
 Accent-Red: #FF4639
 Accent-Red-Shaded: #A82E26
+
 Accent-Blue: #60C7E8
 Accent-Purple: #B34BFF
-Background-Green: #78FF58
 
 Navbar-Gray: #333
 Navbar-Dark-Gray: #111
 Card-White: #F5F5F5
+
+Yellow: #E8B220
