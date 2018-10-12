@@ -2,9 +2,9 @@
 
 <ul id="navbar">
     {% for item in navbar_items %}
-        <li class="navbar-item{% if item['name'] == navbar_current %} navbar-current{% end %}">
+        <li class="navbar-item{% if item['display-text'] == navbar_current %} navbar-current{% end %}">
             <a href="{{ escape(item["route"]) }}">
-                {{ escape(item["name"]) }}
+                {{ escape(item["display-text"]) }}
             </a>
         </li>
     {% end %}
