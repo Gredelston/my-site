@@ -1,11 +1,14 @@
 Light-Green: #78FF58
 Dark-Green: #244C1A
 
-Accent-Red: #FF4639
-Accent-Red-Shaded: #A82E26
+Red: #FF4639
+Red-Shaded: #A82E26
 
-Accent-Blue: #60C7E8
-Accent-Purple: #B34BFF
+Light-Blue: #60C7E8
+
+Light-Purple: #B34BFF
+Dark-Purple: #7A33AD
+
 
 Navbar-Gray: #333
 Navbar-Dark-Gray: #111

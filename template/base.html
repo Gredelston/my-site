@@ -1,8 +1,8 @@
 <html>
     <head>
-        {% block head %}{% end %}
-        <link rel='stylesheet' href='{{ static_url("base.css") }}'>
         <link rel='stylesheet' href='{{ static_url("reset.css") }}'>
+        <link rel='stylesheet' href='{{ static_url("base.css") }}'>
+        {% block head %}{% end %}
 
         <title>
             {% block title %}

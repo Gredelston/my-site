@@ -9,10 +9,11 @@
 }
 
 #main {
-    background-color: #78FF58;
+    background-color: #60C7E8;
     height: 100%;
     width: 100%;
     position: absolute;
+    line-height: 1.5;
 }
 
 .card {
@@ -35,9 +36,14 @@
     font-size: 36px;
     padding-bottom: 16px;
     font-family: "ADAM.CG";
-    color: #244C1A
+    color: #333;
 }
 
 .card p {
     padding-left: 1px;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
 }
