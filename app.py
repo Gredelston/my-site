@@ -19,17 +19,12 @@ class PageHandler(tornado.web.RequestHandler):
             {
                 "name": "About",
                 "route": "/about"
-            },
-            {
-                "name": "Shutdown",
-                "route": "/shutdown"
             }
         ]
         self.render(
             self.template,
             navbar_items=navbar_items,
-            navbar_current=self.navbar_current
-        )
+            navbar_current=self.navbar_current)
 
 
 class HomepageHandler(PageHandler):
@@ -42,15 +37,6 @@ class AboutPageHandler(PageHandler):
     navbar_current = "About"
 
 
-class ShutdownHandler(PageHandler):
-    template = "shutdown.html"
-    navbar_current = "Shutdown"
-
-    def get(self):
-        PageHandler.get(self)
-        shutdown_app()
-
-
 ### Application logic
 
 def make_app():
@@ -58,8 +44,7 @@ def make_app():
         (r"/", HomepageHandler),
         (r"/home", HomepageHandler),
         (r"/index", HomepageHandler),
-        (r"/about", AboutPageHandler),
-        (r"/shutdown", ShutdownHandler)
+        (r"/about", AboutPageHandler)
     ]
     settings = {
         "static_path": config.static_path,
