@@ -11,7 +11,7 @@
 {% block body %}
     <div class='headline'>
         <div class='headline__cell headline__cell--thin'>
-            <img class='headline__cell-contents--img headline-img__border-radius--left-corner-only' src='{{ static_url("images/Headshot-right-facing.jpg") }}'>
+            <img class='headline__cell-contents--img headline-img__border-radius--left-corner-only' src='{{ static_url("images/me/Headshot-right-facing.jpg") }}'>
         </div>
 
         <div class='headline__cell '>
@@ -27,15 +27,27 @@
         </div>
 
         <div class='headline__cell headline__cell--thin'>
-            <img class='headline__cell-contents--img headline-img__border-radius--right-corner-only' src='{{ static_url("images/Headshot-left-facing.jpg") }}'>
+            <img class='headline__cell-contents--img headline-img__border-radius--right-corner-only' src='{{ static_url("images/me/desert-enhanced.jpg") }}'>
         </div>
     </div>
 
 
     <div class='card'>
-        <h1>About Me</h1>
-        <p id='blurb'>
-            My name is Greg. I'm a software developer. And 
-        </p>
+        <div class='card__title'>
+            About Me
+        </div>
+        <div class='card__contents'>
+            <div class='card__contents'>
+                <div class='card__contents-line'>
+                    I'm a software engineer.
+                </div>
+                <div class='card__contents-line'>
+                    I practice improv, Zen, Getting Things Done, and staying fit.
+                </div>
+                <div class='card__contents-line'>
+                    And I'm looking for a job!
+                </div>
+            </p>
+        </div>
     </div>
 {% end %}

@@ -22,7 +22,7 @@ pages = [
         "name": "About",
         "route": "/about",
         "template": "about.html",
-        "navbar-display": True,
+        "navbar-display": False,
         "navbar-display-text": "About Me",
         "navbar-children": None
     },
