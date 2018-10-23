@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Pacifico";
+    src: url("fonts/Pacifico.ttf");
+}
+
+.headline {
+    width: 83.33%;
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    display: table;
+}
+
+.headline__cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.headline__cell--thin {
+    width: 30%;
+}
+
+.headline__cell-contents--img {
+    float: inline-start;
+    height: 15vw;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.headline-img__border-radius--left-corner-only {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 80px 80px 80px 0px;
+}
+
+.headline-img__border-radius--right-corner-only {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 80px 80px 0px 80px;
+}
+
+.headline__cell-contents--text {
+    width: 100%;
+    display: block;
+    font-size: 5vw;
+    font-family: Pacifico;
+}
+
+.headline__cell-contents--text-small {
+    font-size: 1.4vw;
+}
+
+.headline__cell-contents--center {
+    text-align: center;
+}

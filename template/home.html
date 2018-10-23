@@ -9,8 +9,31 @@
 {% end %}
 
 {% block body %}
+    <div class='headline'>
+        <div class='headline__cell headline__cell--thin'>
+            <img class='headline__cell-contents--img headline-img__border-radius--left-corner-only' src='{{ static_url("images/Headshot-right-facing.jpg") }}'>
+        </div>
+
+        <div class='headline__cell '>
+            <div class='headline__cell-contents--text headline__cell-contents--center headline__cell-contents--text-small'>
+                Hi, I'm
+            </div>
+            <div class='headline__cell-contents--text headline__cell-contents--center'>
+                Greg Edelston!
+            </div>
+            <div class='headline__cell-contents--text headline__cell-contents--center headline__cell-contents--text-small'>
+                It's nice to meet you.
+            </div>
+        </div>
+
+        <div class='headline__cell headline__cell--thin'>
+            <img class='headline__cell-contents--img headline-img__border-radius--right-corner-only' src='{{ static_url("images/Headshot-left-facing.jpg") }}'>
+        </div>
+    </div>
+
+
     <div class='card'>
-        <h1>Hello, world!</h1>
+        <h1>About Me</h1>
         <p id='blurb'>
             My name is Greg. I'm a software developer. And 
         </p>
