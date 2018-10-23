@@ -16,6 +16,11 @@
     line-height: 1.5;
 }
 
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
@@ -23,27 +28,34 @@
     width: 83.33%;
     margin: auto;
     margin-top: 40px;
-    padding: 20px;
+    padding: 16px;
     border-radius: 10px 0px;
     position: relative;
     font-family: "Nunito";
     display: none;
 }
 
-.card h1 {
+.card__title {
     font-size: 36px;
-    padding-bottom: 16px;
     font-family: "ADAM.CG";
     color: #333;
+    padding: 8px;
 }
 
-.card p {
-    padding-left: 1px;
-    bottom: 15px;
+.card__contents {
     position: relative;
+    padding-left: 8px;
 }
 
-ul {
-    list-style-type: disc;
-    list-style-position: inside;
+.card__contents-line {
+    padding-top: 8px;
+}
+
+.social-logos__img {
+    width: 48px;
+    padding-right: 8px;
+}
+
+.social-logos__link {
+    text-decoration: none;
 }

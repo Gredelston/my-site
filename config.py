@@ -25,5 +25,13 @@ pages = [
         "navbar-display": True,
         "navbar-display-text": "About Me",
         "navbar-children": None
-    }
+    },
+    {
+        "name": "Contact Me",
+        "route": "/contact",
+        "template": "contact.html",
+        "navbar-display": "True",
+        "navbar-display-text": "Contact",
+        "navbar-children": None
+    },
 ]

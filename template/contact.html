@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Contact Me
+{% end %}
+
+{% block head %}
+{% end %}
+
+{% block body %}
+    <div class="card">
+        <div class="card__title">
+            Get in touch
+        </div>
+
+        <div class="card__contents">
+            <p class="card__contents-line">
+                The best way to say hello is via email: gredelston -AT- gmail.com.
+            </p>
+            <p class="card__contents-line">
+                If you prefer, you can find me on the following social media:
+            </p>
+            <div class="card__contents-line social-logos__container">
+                <a class='social-logos__link' href="https://github.com/gredelston">
+                    <img class='social-logos__img' src='{{ static_url('images/social/Github.png') }}'>
+                </a>
+                <a class='social-logos__link' href="https://linkedin.com/in/gregedelston">
+                    <img class='social-logos__img' src='{{ static_url('images/social/LinkedIn.png') }}'>
+                </a>
+                <a class='social-logos__link' href="https://twitter.com/gredelston">
+                    <img class='social-logos__img' src='{{ static_url('images/social/Twitter.png') }}'>
+                </a>
+            </div>
+        </div>
+    </div>
+{% end %}
