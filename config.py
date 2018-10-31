@@ -27,6 +27,14 @@ pages = [
         "navbar-children": None
     },
     {
+        "name": "Résumé",
+        "route": "/resume",
+        "template": "resume.html",
+        "navbar-display": True,
+        "navbar-display-text": "Résumé",
+        "navbar-children": None
+    },
+    {
         "name": "Contact Me",
         "route": "/contact",
         "template": "contact.html",

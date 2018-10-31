@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Greg Edelston—Résumé
+{% end %}
+
+{% block head %}
+{% end %}
+
+{% block body %}
+    <object data="{{ static_url("resume.pdf") }}" type="application/pdf" width="100%" height="100%">
+        <div class="card">
+            <p class="card__title">
+                Whoops!
+            </p>
+            <p class="card__contents-line">
+                If you're reading this, that means my résumé did not embed properly.
+            </p>
+            <p class="card__contents-line">
+                <a href="{{ static_url("resume.pdf") }}">
+                    Click here
+                </a>
+                to view it as a standalone.
+            </p>
+        </div>
+    </object>
+{% end %}]
