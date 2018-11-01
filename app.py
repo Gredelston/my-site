@@ -70,5 +70,8 @@ def shutdown_app():
 
 if __name__ == "__main__":
     app = make_app()
+    print("App created.")
     app.listen(config.port)
+    print("Listening on port {}.".format(config.port))
+    print("Starting app...")
     tornado.ioloop.IOLoop.current().start()
