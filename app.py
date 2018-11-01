@@ -3,6 +3,7 @@ import tornado.ioloop
 import tornado.web
 
 import config
+from utils import debug_print
 
 ### Page handlers ###
 
@@ -70,8 +71,11 @@ def shutdown_app():
 
 if __name__ == "__main__":
     app = make_app()
-    print("App created.")
-    app.listen(config.port)
-    print("Listening on port {}.".format(config.port))
-    print("Starting app...")
+    debug_print("App created.")
+
+    port = int(os.environ.get("PORT", 8888))
+    app.listen(port)
+    debug_print("Listening on port {}.".format(port))
+
+    debug_print("Starting app.")
     tornado.ioloop.IOLoop.current().start()
