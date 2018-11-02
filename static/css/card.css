@@ -30,12 +30,12 @@
     padding: 24px 48px 24px 24px;
 }
 
-.card__contents a {
-    font-weight: bold;
+.card__contents p {
+    padding-bottom: 16px;
 }
 
-.card__body-line {
-    padding-bottom: 16px;
+.card__contents a {
+    font-weight: bold;
 }
 
 .card--half-width {
