@@ -1,15 +1,20 @@
+.cards-container {
+    margin-left: 6.67%;
+    margin-right: 6.67%;
+    margin-top: 20px;
+}
+
 .card {
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     background: #F5F5F5;
-    margin-top: 40px;
-    margin-left: 6.67%;
-    margin-right: 6.67%;
-    padding: 16px;
-    border-radius: 20px 20px 20px 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px 0px 20px 0px;
     position: relative;
     font-family: "Nunito";
-    display: none;
+    display: inline-block;
     background-color: #eee;
 }
 
@@ -17,14 +22,30 @@
     font-size: 36px;
     font-family: "ADAM.CG";
     color: #333;
-    padding-left: 12px;
+    padding-bottom: 12px;
 }
 
 .card__contents {
     position: relative;
-    padding-left: 8px;
+    padding: 24px 24px;
 }
 
 .card__contents-line {
     padding-top: 8px;
+}
+
+.card--half-width {
+    width: 48%;
+}
+
+.card--left {
+    float: left;
+}
+
+.card--right {
+    float: right;
+}
+
+.card--middle {
+    margin: auto;
 }
