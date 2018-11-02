@@ -1,11 +1,11 @@
 @font-face {
     font-family: "ADAM.CG";
-    src: url("fonts/ADAM.CG\ PRO.otf");
+    src: url("../fonts/ADAM.CG\ PRO.otf");
 }
 
 @font-face {
     font-family: "Nunito";
-    src: url("fonts/Nunito/Nunito-Regular.ttf");
+    src: url("../fonts/Nunito/Nunito-Regular.ttf");
 }
 
 #main {

@@ -9,6 +9,7 @@
 .navbar-item {
     float: left;
     font-family: "Nunito";
+    font-size: 16px;
 }
 
 .navbar-item a {
