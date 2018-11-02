@@ -38,14 +38,19 @@
     width: 48%;
 }
 
+.card--third-width {
+    width: 32%;
+}
+
 .card--left {
     float: left;
 }
 
+.card--center {
+    float: left;
+    margin-left: 2%;
+    margin-right: auto;
+}
 .card--right {
     float: right;
-}
-
-.card--middle {
-    margin: auto;
 }
