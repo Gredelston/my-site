@@ -27,11 +27,15 @@
 
 .card__contents {
     position: relative;
-    padding: 24px 24px;
+    padding: 24px 48px 24px 24px;
+}
+
+.card__contents a {
+    font-weight: bold;
 }
 
 .card__body-line {
-    padding-bottom: 7px;
+    padding-bottom: 16px;
 }
 
 .card--half-width {
