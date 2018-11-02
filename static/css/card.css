@@ -30,8 +30,8 @@
     padding: 24px 24px;
 }
 
-.card__contents-line {
-    padding-top: 8px;
+.card__body-line {
+    padding-bottom: 7px;
 }
 
 .card--half-width {
